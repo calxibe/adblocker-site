@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — FQ-AdBlocker</title>
+    <meta name="description" content="FQ-AdBlocker processes everything locally on your device and does not collect personal data." />
+    <meta name="application-name" content="FQ-AdBlocker" />
+    <meta name="apple-mobile-web-app-title" content="FQ-AdBlocker" />
+    <meta name="theme-color" content="#111723" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://calxibe.github.io/adblocker-site/privacy.html" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="icon-128.png" type="image/png" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="icon-128.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="FQ-AdBlocker" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy Policy — FQ-AdBlocker" />
+    <meta property="og:description" content="FQ-AdBlocker processes everything locally on your device and does not collect personal data." />
+    <meta property="og:url" content="https://calxibe.github.io/adblocker-site/privacy.html" />
+    <meta property="og:image" content="https://calxibe.github.io/adblocker-site/icon-128.png" />
+    <meta property="og:image:alt" content="FQ-AdBlocker icon" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Privacy Policy — FQ-AdBlocker" />
+    <meta name="twitter:description" content="FQ-AdBlocker processes everything locally on your device and does not collect personal data." />
+    <meta name="twitter:image" content="https://calxibe.github.io/adblocker-site/icon-128.png" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="index.html" class="nav-brand">
+          <img src="icon-48.png" alt="" width="28" height="28" />
+          <span>FQ-AdBlocker</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#install">Install</a></li>
+          <li><a href="index.html#changelog">Changelog</a></li>
+          <li><a href="privacy.html" class="nav-active">Privacy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container container-narrow">
+          <p class="eyebrow">Legal</p>
+          <h1 class="page-title">Privacy Policy</h1>
+          <p class="last-updated">Last Updated: March 25, 2026</p>
+
+          <p>This Privacy Policy describes how FQ-AdBlocker ("we", "us", or "our") handles your information when you use our Chrome extension.</p>
+
+          <div class="highlight-box">
+            <strong>Summary:</strong> We do not collect, store, or transmit any of your data to external servers. All blocking and filtering happens locally on your device.
+          </div>
+
+          <h2>1. Data Collection</h2>
+          <p><strong>FQ-AdBlocker does not collect any personal data.</strong></p>
+          <p>The extension reads the content of web pages you visit solely to apply cosmetic filtering — hiding ad containers, cookie consent banners, and other unwanted elements. This processing is performed entirely within your browser on your device.</p>
+          <p>Network blocking is handled by Chrome's Declarative Net Request API using static rule sets. The extension does not intercept, read, or store your network traffic.</p>
+          <ul>
+            <li>We do not send any data to external servers.</li>
+            <li>We do not track your browsing history.</li>
+            <li>We do not collect analytics or telemetry.</li>
+            <li>We do not use cookies.</li>
+          </ul>
+
+          <h2>2. Local Storage</h2>
+          <p>We use your browser's extension storage (<code>chrome.storage.sync</code>) solely to save user preferences, such as:</p>
+          <ul>
+            <li>Whether blocking is globally enabled or disabled</li>
+            <li>Hide-containers display preference</li>
+            <li>Cookie consent and video ad blocking toggles</li>
+            <li>Allowlisted domains and wildcard patterns</li>
+            <li>Custom CSS selectors, block domains, and video ad domains</li>
+          </ul>
+          <p>These settings are stored locally on your device and synced across your Chrome profile via Chrome's built-in sync mechanism. We do not have access to this data.</p>
+
+          <h2>3. Permissions</h2>
+          <p>FQ-AdBlocker requests the following Chrome permissions:</p>
+          <ul>
+            <li><strong>declarativeNetRequest / declarativeNetRequestWithHostAccess:</strong> Used to block network requests to ad and tracking domains using static rule sets.</li>
+            <li><strong>storage:</strong> Used to persist your settings locally.</li>
+            <li><strong>tabs:</strong> Used to detect the current site for per-site allowlisting in the popup.</li>
+            <li><strong>host_permissions (&lt;all_urls&gt;):</strong> Required for the content script to apply cosmetic filtering on all websites.</li>
+          </ul>
+          <p>No permission is used to collect or transmit your personal information.</p>
+
+          <h2>4. Third-Party Services</h2>
+          <p>FQ-AdBlocker does not load any external scripts, analytics, or CDN resources. All code runs locally from the extension bundle.</p>
+
+          <h2>5. Website</h2>
+          <p>The FQ-AdBlocker website is a static site hosted on GitHub Pages. It does not use cookies, analytics, or tracking scripts.</p>
+
+          <h2>6. Your Rights</h2>
+          <p>Since FQ-AdBlocker does not collect or store personal data, there is no personal data to access, modify, or delete. If you have questions, you may contact us using the information below.</p>
+
+          <h2>7. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+          <h2>8. Contact</h2>
+          <p>If you have any questions about this Privacy Policy, please open an issue on our GitHub repository:</p>
+          <p>
+            <strong>Issues:</strong> <a href="https://github.com/calxibe/adblocker-site/issues">github.com/calxibe/adblocker-site/issues</a>
+          </p>
+          <p>
+            <strong>Publisher:</strong> <a href="https://fixquotes.com/">FixQuotes</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 FQ-AdBlocker. Built with care.</p>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="https://github.com/calxibe/adblocker-site/issues">Feedback &amp; Issues</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
