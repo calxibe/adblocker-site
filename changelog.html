@@ -36,24 +36,27 @@
     <main>
       <section id="changelog" class="section">
         <div class="container container-narrow">
-          <p class="eyebrow text-center">What's new</p>
           <h2 class="section-title">Changelog</h2>
 
           <article class="changelog-entry">
             <div class="changelog-version">
-              <span class="badge">1.0.1</span>
+              <span class="badge">v1.0.1</span>
               <time datetime="2026-03-26">March 26, 2026</time>
             </div>
             <h3>Added</h3>
             <ul>
+              <li><strong>Dynamic Remote Rules Syncing:</strong> The extension now utilizes background alarms to silently download the newest ad-blocking and cosmetic network rules directly from a secure API, letting us deploy rapid filter updates without requiring waiting for an extension update review.</li>
               <li>Added a "Block notification prompts" toggle to prevent sites from requesting invasive browser notification permissions. When enabled, it spoofs a "denied" state directly to any site attempting to prompt the user.</li>
               <li>Added tracking of daily blocked ads and cookie overlays to local storage. It keeps a rolling history of the last 400 days.</li>
               <li>Added "declarativeNetRequestFeedback" permission to intercept and count network-level ad blocks accurately.</li>
               <li>Added a small "Enable" button in the popup when blocking is globally disabled, allowing users to re-enable directly.</li>
               <li>Added "Block tracking" toggle (enabled by default) with a separate static ruleset for analytics and tracking scripts (Google Analytics, Google Tag Manager, Microsoft Clarity, comScore, Bing telemetry).</li>
+              <li>Custom selectors, custom block domains, and custom video ad domain sections on the settings page are now collapsed by default and expand with a smooth slide-down animation when their heading is clicked.</li>
+              <li>Added a subtle "rules last updated" timestamp and refresh button at the bottom of the settings page, allowing users to see when rules were last synced and manually trigger a refresh.</li>
             </ul>
             <h3>Fixed</h3>
             <ul>
+              <li>Fixed a bug where allowlisted (disabled) sites would infinitely increment the "Ads removed" count by mischaracterizing regular background network requests as ad blocks.</li>
               <li>Fixed inaccurately low "Ads removed" counter caused by queries occasionally failing or elements being dynamically removed from the DOM before being counted.</li>
               <li>Updated the "Ads removed" counter to factor in both cosmetically hidden ads on the page and ads blocked natively at the network level.</li>
               <li>Fixed "No tab with id" errors when interacting with closed tabs in the popup and service worker.</li>
@@ -62,7 +65,7 @@
 
           <article class="changelog-entry">
             <div class="changelog-version">
-              <span class="badge">1.0.0</span>
+              <span class="badge">v1.0.0</span>
               <time datetime="2025-03-25">March 25, 2026</time>
             </div>
             <ul>
