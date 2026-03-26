@@ -448,6 +448,51 @@ img {
   margin-top: 4px;
 }
 
+/* --- More Extensions --------------------------------------- */
+
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.extension-card {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.extension-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.extension-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.extension-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.extension-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .extensions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Footer ------------------------------------------------ */
 
 .site-footer {
