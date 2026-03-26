@@ -60,6 +60,19 @@
               <li>Fixed inaccurately low "Ads removed" counter caused by queries occasionally failing or elements being dynamically removed from the DOM before being counted.</li>
               <li>Updated the "Ads removed" counter to factor in both cosmetically hidden ads on the page and ads blocked natively at the network level.</li>
               <li>Fixed "No tab with id" errors when interacting with closed tabs in the popup and service worker.</li>
+              <li>Fixed the "Block notification prompts" toggle so it now persists correctly through the shared settings pipeline and applies consistently across the options page, popup state, and content script.</li>
+              <li>Fixed notification prompt blocking so it can be removed again on the current page when the user disables the setting or allowlists the site.</li>
+              <li>Fixed cosmetic and cookie-consent rule refresh behavior so synced remote selector updates apply to already-open tabs without requiring a manual page reload.</li>
+              <li>Fixed wildcard allowlist entries so network-level allow rules now match the same subdomain-only scope used by the UI and content script state.</li>
+              <li>Fixed notification permission restoration so disabling the feature removes the page-level override cleanly instead of leaving stale permission state behind.</li>
+              <li>Fixed popup and options error paths so temporary message failures do not leave controls stuck in stale visual state or permanently block saving with default values.</li>
+              <li>Fixed custom block-domain and video-ad domain persistence so only valid DNR filter patterns are stored and replayed back into dynamic rules.</li>
+              <li>Fixed remote rule ingestion so malformed or empty payloads no longer overwrite the last known good ruleset.</li>
+              <li>Fixed dynamic rule generation to cap remote, custom, and video rule groups within their reserved ID ranges before syncing them into DNR.</li>
+            </ul>
+            <h3>Changed</h3>
+            <ul>
+              <li>Updated the settings page to refresh the "rules updated" timestamp immediately when a background rules sync completes.</li>
             </ul>
           </article>
 
