@@ -59,7 +59,7 @@
         <div class="container hero-inner">
           <p class="eyebrow">Chrome & Edge Extension · Manifest V3</p>
           <h1>Browse without<br />the noise.</h1>
-          <p class="hero-sub">FQ-AdBlocker is a lightweight, privacy-first extension for Chrome and Edge that blocks ads, hides cookie banners, and keeps pages clean — all with zero tracking.</p>
+          <p class="hero-sub">FQ-AdBlocker is a lightweight, privacy-first extension for Chrome and Edge that blocks ads, trackers, cookie banners, and notification prompts while giving you clean per-site control with zero tracking.</p>
           <div class="hero-actions">
             <a href="index.html#install" class="btn btn-disabled">Coming Soon</a>
             <a href="index.html#features" class="btn btn-outline">See Features</a>
@@ -88,7 +88,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
               </div>
               <h3>Cosmetic Filtering</h3>
-              <p>Hides ad containers, banners, and sponsored content with CSS selector-based filtering. Add your own custom selectors for full control.</p>
+              <p>Hides ad containers, banners, and sponsored content with CSS selector-based filtering. Add your own selectors and choose whether blocked containers collapse completely or stay in the layout.</p>
             </article>
 
             <article class="card">
@@ -96,7 +96,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
               </div>
               <h3>Cookie Consent Hiding</h3>
-              <p>Dismisses cookie banners, consent modals, and page-locking overlays automatically so you can get straight to the content.</p>
+              <p>Dismisses cookie banners, consent modals, and page-locking overlays automatically, then tries to restore page scrolling when a consent layer locks the page.</p>
             </article>
 
             <article class="card">
@@ -112,7 +112,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
               </div>
               <h3>Notification Blocking</h3>
-              <p>Blocks annoying site notification permission requests. No more pop-ups asking to send you alerts.</p>
+              <p>Blocks annoying site notification permission requests before they interrupt you. No more pop-ups asking to send you alerts.</p>
             </article>
 
             <article class="card">
@@ -120,7 +120,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
               </div>
               <h3>Video Ad Blocking</h3>
-              <p>Blocks pre-roll video ads by intercepting the Google IMA SDK on supported sites.</p>
+              <p>Blocks pre-roll video ads by intercepting the Google IMA SDK on supported sites. It is currently marked beta and supports extra custom video ad domains from settings.</p>
             </article>
 
             <article class="card">
@@ -128,7 +128,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
               </div>
               <h3>Per-Site Control</h3>
-              <p>Pause blocking on any site from the popup. Add exact hostnames or wildcard patterns to your allowlist.</p>
+              <p>Pause blocking on the current site from the popup, then manage exact hostnames or wildcard patterns from settings when you need broader allowlisting.</p>
             </article>
 
             <article class="card">
@@ -136,7 +136,15 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
               </div>
               <h3>Auto-Updating Rules</h3>
-              <p>Filter lists sync silently in the background from a secure API, so new ad patterns are caught without waiting for an extension update.</p>
+              <p>Filter lists sync silently in the background from a secure API, and the settings page shows the last sync time with a manual refresh button when you want to update immediately.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 4-5"/></svg>
+              </div>
+              <h3>Settings &amp; Stats</h3>
+              <p>The popup shows how many ads were removed on the current page, while settings give you separate toggles for tracking, notifications, cookie banners, video ads, and custom rule lists.</p>
             </article>
           </div>
         </div>
@@ -171,7 +179,7 @@
             <div class="step">
               <span class="step-num">4</span>
               <h3>Customize</h3>
-              <p>Open the settings page to manage allowlisted sites, custom selectors, and block domains.</p>
+              <p>Open the settings page to manage wildcard allowlists, custom selectors, custom block domains, custom video ad domains, and rule refresh.</p>
             </div>
           </div>
         </div>
