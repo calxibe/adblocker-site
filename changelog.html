@@ -11,9 +11,9 @@
     <link rel="canonical" href="https://adblocker.fixquotes.com/changelog.html" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="icon-128.png" type="image/png" />
+    <link rel="icon" href="img/icon-128.png" type="image/png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="icon-128.png" />
+    <link rel="apple-touch-icon" href="img/icon-128.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,7 +21,7 @@
     <header class="site-header">
       <nav class="nav container">
         <a href="index.html" class="nav-brand">
-          <img src="icon-48.png" alt="" width="28" height="28" />
+          <img src="img/icon-48.png" alt="" width="28" height="28" />
           <span>FQ-AdBlocker</span>
         </a>
         <ul class="nav-links">
@@ -46,6 +46,7 @@
             <h3>Added</h3>
             <ul>
               <li><strong>Dynamic Remote Rules Syncing:</strong> The extension now utilizes background alarms to silently download the newest ad-blocking and cosmetic network rules directly from a secure API, letting us deploy rapid filter updates without requiring waiting for an extension update review.</li>
+              <li>Added staged retry handling for the initial remote rules download. Fresh installs now retry every minute for the first 10 failed attempts, then every 5 minutes until the first synced ruleset is available.</li>
               <li>Added a "Block notification prompts" toggle to prevent sites from requesting invasive browser notification permissions. When enabled, it spoofs a "denied" state directly to any site attempting to prompt the user.</li>
               <li>Added tracking of daily blocked ads and cookie overlays to local storage. It keeps a rolling history of the last 400 days.</li>
               <li>Added "declarativeNetRequestFeedback" permission to intercept and count network-level ad blocks accurately.</li>
@@ -69,10 +70,16 @@
               <li>Fixed custom block-domain and video-ad domain persistence so only valid DNR filter patterns are stored and replayed back into dynamic rules.</li>
               <li>Fixed remote rule ingestion so malformed or empty payloads no longer overwrite the last known good ruleset.</li>
               <li>Fixed dynamic rule generation to cap remote, custom, and video rule groups within their reserved ID ranges before syncing them into DNR.</li>
+              <li>Fixed partial remote payload handling so selectors, cookie rules, and video-domain lists are preserved when the API only returns some sections.</li>
+              <li>Fixed first-run sync recovery so brand new installs keep retrying automatically instead of sitting idle for hours after an initial network failure.</li>
+              <li>Fixed packaged-build popup counts by reading matched DNR rules for the active page instead of depending only on the unpacked debug event.</li>
+              <li>Fixed cosmetic and cookie marker cleanup so selector removals and attribute-only DOM changes do not leave stale blocked markers behind.</li>
+              <li>Fixed production fallback behavior so missing synced rules no longer spam failed requests for stripped local JSON files.</li>
             </ul>
             <h3>Changed</h3>
             <ul>
               <li>Updated the settings page to refresh the "rules updated" timestamp immediately when a background rules sync completes.</li>
+              <li>Updated the popup and settings page to show when the initial rules download is still pending and when the next retry will run.</li>
             </ul>
           </article>
 

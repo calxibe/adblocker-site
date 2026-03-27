@@ -249,6 +249,12 @@ img {
   flex-wrap: wrap;
 }
 
+.btn-disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .hero-glow {
   position: absolute;
   top: -40%;
@@ -277,6 +283,10 @@ img {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   text-align: center;
   margin-bottom: 56px;
+}
+
+.section-showcase {
+  padding-top: 40px;
 }
 
 /* --- Cards ------------------------------------------------- */
@@ -328,6 +338,173 @@ img {
 
 /* --- Features Grid ----------------------------------------- */
 
+.showcase-shell {
+  display: grid;
+  gap: 24px;
+}
+
+.showcase-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.7fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.showcase-stage {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.showcase-stage img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.showcase-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.showcase-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.showcase-copy h3 {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+}
+
+.showcase-description,
+.showcase-support {
+  margin: 0;
+  color: var(--muted);
+}
+
+.showcase-support {
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.showcase-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.showcase-thumb {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  color: var(--text);
+  text-align: left;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.showcase-thumb:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+}
+
+.showcase-thumb.is-active {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  box-shadow: 0 20px 40px rgba(209, 59, 73, 0.14);
+}
+
+.showcase-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.showcase-thumb span {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.screenshot-modal[hidden] {
+  display: none;
+}
+
+.screenshot-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+}
+
+.screenshot-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 14, 24, 0.76);
+  backdrop-filter: blur(14px);
+}
+
+.screenshot-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  background: rgba(17, 23, 35, 0.92);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+}
+
+.screenshot-modal-dialog img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.screenshot-modal-title {
+  margin: 14px 6px 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #eef2ff;
+}
+
+.screenshot-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .features-grid {
   display: grid;
   gap: 20px;
@@ -335,12 +512,32 @@ img {
 }
 
 @media (max-width: 900px) {
+  .showcase-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-thumbnails {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 560px) {
+  .showcase-thumbnails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .screenshot-modal {
+    padding: 18px 12px;
+  }
+
+  .screenshot-modal-dialog {
+    padding: 14px;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
   }

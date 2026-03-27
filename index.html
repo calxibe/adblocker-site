@@ -14,9 +14,9 @@
     <link rel="canonical" href="https://adblocker.fixquotes.com" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="icon-128.png" type="image/png" />
+    <link rel="icon" href="img/icon-128.png" type="image/png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="icon-128.png" />
+    <link rel="apple-touch-icon" href="img/icon-128.png" />
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="FQ-AdBlocker" />
@@ -25,14 +25,14 @@
     <meta property="og:title" content="FQ-AdBlocker — Lightweight Ad Blocker for Chrome & Edge" />
     <meta property="og:description" content="A lightweight Manifest V3 extension for Chrome and Edge with network blocking, cosmetic filtering, cookie consent hiding, and video ad blocking." />
     <meta property="og:url" content="https://adblocker.fixquotes.com" />
-    <meta property="og:image" content="https://adblocker.fixquotes.com/icon-128.png" />
-    <meta property="og:image:alt" content="FQ-AdBlocker icon" />
+    <meta property="og:image" content="https://adblocker.fixquotes.com/img/feature-before-after-newspaper.png" />
+    <meta property="og:image:alt" content="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="FQ-AdBlocker — Lightweight Ad Blocker for Chrome & Edge" />
     <meta name="twitter:description" content="A lightweight Manifest V3 extension for Chrome and Edge with network blocking, cosmetic filtering, cookie consent hiding, and video ad blocking." />
-    <meta name="twitter:image" content="https://adblocker.fixquotes.com/icon-128.png" />
+    <meta name="twitter:image" content="https://adblocker.fixquotes.com/img/feature-before-after-newspaper.png" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -41,7 +41,7 @@
     <header class="site-header">
       <nav class="nav container">
         <a href="index.html" class="nav-brand">
-          <img src="icon-48.png" alt="" width="28" height="28" />
+          <img src="img/icon-48.png" alt="" width="28" height="28" />
           <span>FQ-AdBlocker</span>
         </a>
         <ul class="nav-links">
@@ -62,10 +62,125 @@
           <p class="hero-sub">FQ-AdBlocker is a lightweight, privacy-first extension for Chrome and Edge that blocks ads, trackers, cookie banners, and notification prompts while giving you clean per-site control with zero tracking.</p>
           <div class="hero-actions">
             <a href="index.html#install" class="btn btn-disabled">Coming Soon</a>
+            <a href="index.html#screenshots" class="btn btn-outline">See Screenshots</a>
             <a href="index.html#features" class="btn btn-outline">See Features</a>
           </div>
         </div>
         <div class="hero-glow" aria-hidden="true"></div>
+      </section>
+
+      <section id="screenshots" class="section section-showcase">
+        <div class="container">
+          <p class="eyebrow text-center">See It In Action</p>
+          <h2 class="section-title">A closer look at the workflow.</h2>
+
+          <div class="showcase-shell" data-screenshot-gallery>
+            <div class="showcase-feature">
+              <button class="showcase-stage" type="button" data-screenshot-open aria-label="Open selected screenshot in full size">
+                <img
+                  src="img/feature-before-after-newspaper.png"
+                  alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker"
+                  data-screenshot-active-image
+                />
+              </button>
+
+              <article class="showcase-copy card">
+                <p class="showcase-label" data-screenshot-active-label>Before / After</p>
+                <h3 data-screenshot-active-title>Watch a cluttered news page turn readable</h3>
+                <p class="showcase-description" data-screenshot-active-description>One side shows the typical ad-heavy newspaper layout. The other shows the same story after FQ-AdBlocker clears banners, sticky promos, and overlays.</p>
+                <p class="showcase-support" data-screenshot-active-support>This is the clearest way to show the product value: same page, same article, much less noise.</p>
+              </article>
+            </div>
+
+            <div class="showcase-thumbnails" role="tablist" aria-label="Extension screenshots">
+              <button
+                class="showcase-thumb is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-screenshot-thumb
+                data-image="img/feature-before-after-newspaper.png"
+                data-title="Watch a cluttered news page turn readable"
+                data-label="Before / After"
+                data-description="One side shows the typical ad-heavy newspaper layout. The other shows the same story after FQ-AdBlocker clears banners, sticky promos, and overlays."
+                data-support="This is the clearest way to show the product value: same page, same article, much less noise."
+                data-alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker"
+              >
+                <img src="img/feature-before-after-newspaper_thumb.png" alt="" />
+                <span>Before / After</span>
+              </button>
+
+              <button
+                class="showcase-thumb"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-screenshot-thumb
+                data-image="img/feature-site-allowlist.png"
+                data-title="Pause blocking only where you need it"
+                data-label="Allowlist"
+                data-description="Allowlist the active site from the popup while keeping blocking enabled everywhere else."
+                data-support="Matched wildcard entries are surfaced in the popup, so users can see exactly why protection is paused on a given host."
+                data-alt="FQ-AdBlocker popup showing a matched allowlist pattern and enable button for the current site"
+              >
+                <img src="img/feature-site-allowlist_thumb.png" alt="" />
+                <span>Site Allowlist</span>
+              </button>
+
+              <button
+                class="showcase-thumb"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-screenshot-thumb
+                data-image="img/feature-settings-overview.png"
+                data-title="Tune global behavior from one settings page"
+                data-label="Settings"
+                data-description="Control global blocking, cookie banners, tracking, notifications, video ads, and wildcard-disabled domains from a single page."
+                data-support="The settings page keeps the core toggles visible first, then leaves room for more advanced rule lists further down."
+                data-alt="FQ-AdBlocker settings page showing global toggles and disabled domains"
+              >
+                <img src="img/feature-settings-overview_thumb.png" alt="" />
+                <span>Settings Overview</span>
+              </button>
+
+              <button
+                class="showcase-thumb"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-screenshot-thumb
+                data-image="img/feature-custom-rules.png"
+                data-title="Layer in your own selectors and block rules"
+                data-label="Custom Rules"
+                data-description="Add custom selectors, extra blocked domains, and custom video-ad filters on top of the built-in remote lists."
+                data-support="This gives power users a controlled way to extend filtering without losing the lightweight default setup."
+                data-alt="FQ-AdBlocker settings page showing custom selectors, custom block domains, and custom video ad domains"
+              >
+                <img src="img/feature-custom-rules_thumb.png" alt="" />
+                <span>Custom Rules</span>
+              </button>
+
+              <button
+                class="showcase-thumb"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-screenshot-thumb
+                data-image="img/feature-dark-mode.png"
+                data-title="Stay comfortable with automatic dark mode"
+                data-label="Dark Mode"
+                data-description="The settings page follows the browser color scheme so advanced controls stay readable during long evening sessions."
+                data-support="The extension UI keeps the same structure in dark mode, which makes the popup and settings page easy to use without a separate theme toggle."
+                data-alt="FQ-AdBlocker settings page shown in dark mode"
+              >
+                <img src="img/feature-dark-mode_thumb.png" alt="" />
+                <span>Dark Mode</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Features -->
@@ -222,5 +337,18 @@
         </div>
       </div>
     </footer>
+
+    <div class="screenshot-modal" data-screenshot-modal hidden>
+      <div class="screenshot-modal-backdrop" data-screenshot-close></div>
+      <div class="screenshot-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="screenshot-modal-title">
+        <button class="screenshot-modal-close" type="button" aria-label="Close screenshot" data-screenshot-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <img src="img/feature-before-after-newspaper.png" alt="" data-screenshot-modal-image />
+        <p class="screenshot-modal-title" id="screenshot-modal-title" data-screenshot-modal-title>Watch a cluttered news page turn readable</p>
+      </div>
+    </div>
+
+    <script src="site.js"></script>
   </body>
 </html>
