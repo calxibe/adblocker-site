@@ -75,6 +75,8 @@
               <li>Fixed packaged-build popup counts by reading matched DNR rules for the active page instead of depending only on the unpacked debug event.</li>
               <li>Fixed cosmetic and cookie marker cleanup so selector removals and attribute-only DOM changes do not leave stale blocked markers behind.</li>
               <li>Fixed production fallback behavior so missing synced rules no longer spam failed requests for stripped local JSON files.</li>
+              <li>Fixed a content-script observer regression that could rescan ad-heavy pages in a tight loop and push Chrome into the “force close this tab” path.</li>
+              <li>Fixed popup ad counts on heavy pages by reading the current blocked-marker state from the page instead of trusting only the in-memory tracker set.</li>
             </ul>
             <h3>Changed</h3>
             <ul>
