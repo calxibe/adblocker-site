@@ -1,6 +1,7 @@
 const galleryRoot = document.querySelector("[data-screenshot-gallery]");
 
 if (galleryRoot) {
+  const mobileGalleryMedia = window.matchMedia("(max-width: 900px)");
   const activeImage = galleryRoot.querySelector("[data-screenshot-active-image]");
   const activeLabel = galleryRoot.querySelector("[data-screenshot-active-label]");
   const activeTitle = galleryRoot.querySelector("[data-screenshot-active-title]");
@@ -13,6 +14,10 @@ if (galleryRoot) {
   const modalImage = modal?.querySelector("[data-screenshot-modal-image]");
   const modalTitle = modal?.querySelector("[data-screenshot-modal-title]");
   const modalCloseButtons = modal ? Array.from(modal.querySelectorAll("[data-screenshot-close]")) : [];
+
+  function getActiveThumb() {
+    return thumbButtons.find((thumbButton) => thumbButton.classList.contains("is-active")) || thumbButtons[0] || null;
+  }
 
   function setActiveThumb(button) {
     if (!button) {
@@ -33,15 +38,17 @@ if (galleryRoot) {
     activeSupport.textContent = button.dataset.support || "";
   }
 
-  function openModal() {
+  function openModal(button = null) {
     if (!modal || !modalImage || !modalTitle) {
       return;
     }
 
+    const modalSource = button || getActiveThumb();
+
     modal.hidden = false;
-    modalImage.src = activeImage.src;
-    modalImage.alt = activeImage.alt;
-    modalTitle.textContent = activeTitle.textContent;
+    modalImage.src = modalSource?.dataset?.image || activeImage.src;
+    modalImage.alt = modalSource?.dataset?.alt || activeImage.alt;
+    modalTitle.textContent = modalSource?.dataset?.title || activeTitle.textContent;
     document.body.classList.add("modal-open");
   }
 
@@ -55,10 +62,17 @@ if (galleryRoot) {
   }
 
   thumbButtons.forEach((button) => {
-    button.addEventListener("click", () => setActiveThumb(button));
+    button.addEventListener("click", () => {
+      if (mobileGalleryMedia.matches) {
+        openModal(button);
+        return;
+      }
+
+      setActiveThumb(button);
+    });
   });
 
-  openButton?.addEventListener("click", openModal);
+  openButton?.addEventListener("click", () => openModal());
   modalCloseButtons.forEach((button) => button.addEventListener("click", closeModal));
   modal?.addEventListener("click", closeModal);
 
