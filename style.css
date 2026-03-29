@@ -178,6 +178,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border: 0;
   border-radius: var(--radius);
   padding: 12px 32px 14px;
@@ -346,6 +347,7 @@ img {
 .showcase-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.7fr);
+  grid-template-rows: 1fr;
   gap: 24px;
   align-items: stretch;
   margin-bottom: 20px;
@@ -374,7 +376,14 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 14px;
-  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.showcase-copy:hover {
+  transform: none;
+  box-shadow: var(--shadow);
 }
 
 .showcase-label {
@@ -544,6 +553,88 @@ body.modal-open {
 }
 
 /* --- Steps Grid -------------------------------------------- */
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.store-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.store-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 28px 56px rgba(32, 43, 63, 0.16);
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .store-card:hover {
+    box-shadow: 0 28px 56px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.store-card-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.store-logo {
+  flex-shrink: 0;
+}
+
+.store-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.store-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.store-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.store-card .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .store-card .btn {
+    width: 100%;
+  }
+}
 
 .steps-grid {
   display: grid;
