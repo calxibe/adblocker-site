@@ -535,7 +535,7 @@ body.modal-open {
   }
 
   .screenshot-modal-dialog {
-    padding: 10px;
+    padding: 10px 5px;
   }
 
   .features-grid {

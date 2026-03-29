@@ -41,7 +41,7 @@
           <article class="changelog-entry">
             <div class="changelog-version">
               <span class="badge">v1.0.1</span>
-              <time datetime="2026-03-28">March 28, 2026</time>
+              <time datetime="2026-03-29">March 29, 2026</time>
             </div>
             <h3>Added</h3>
             <ul>
@@ -57,6 +57,7 @@
             </ul>
             <h3>Fixed</h3>
             <ul>
+              <li>Fixed Windows packaged-build dependency setup by caching the build-only npm tools outside the synced workspace so `build_min.js` no longer fails when OneDrive or another process locks `node_modules`.</li>
               <li>Fixed a bug where allowlisted (disabled) sites would infinitely increment the "Ads removed" count by mischaracterizing regular background network requests as ad blocks.</li>
               <li>Fixed inaccurately low "Ads removed" counter caused by queries occasionally failing or elements being dynamically removed from the DOM before being counted.</li>
               <li>Updated the "Ads removed" counter to factor in both cosmetically hidden ads on the page and ads blocked natively at the network level.</li>
