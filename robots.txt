@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://adblocker.fixquotes.com/sitemap.xml
+Sitemap: https://fixguard.org/sitemap.xml

@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Changelog — FQ-AdBlocker</title>
-    <meta name="description" content="FQ-AdBlocker changelog — see what's new in each release." />
+    <title>Changelog — FixGuard</title>
+    <meta name="description" content="FixGuard changelog — see what's new in each release." />
     <meta name="theme-color" content="#111723" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://adblocker.fixquotes.com/changelog.html" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://fixguard.org/changelog.html" />
+    <meta http-equiv="refresh" content="0; url=https://fixguard.org/" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/icon-128.png" type="image/png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="apple-touch-icon" href="img/icon-128.png" />
+    <script>
+      window.location.replace("https://fixguard.org/");
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,7 +26,7 @@
       <nav class="nav container">
         <a href="index.html" class="nav-brand">
           <img src="img/icon-48.png" alt="" width="28" height="28" />
-          <span>FQ-AdBlocker</span>
+          <span>FixGuard</span>
         </a>
         <ul class="nav-links">
           <li><a href="index.html#features">Features</a></li>
@@ -40,8 +44,8 @@
 
           <article class="changelog-entry">
             <div class="changelog-version">
-              <span class="badge">v1.0.1</span>
-              <time datetime="2026-03-29">March 29, 2026</time>
+              <span class="badge">v1.0.2</span>
+              <time datetime="2026-03-30">March 30, 2026</time>
             </div>
             <h3>Added</h3>
             <ul>
@@ -55,6 +59,7 @@
             </ul>
             <h3>Fixed</h3>
             <ul>
+              <li>Switched remote rules syncing from the legacy FixQuotes API host to <a href="https://fixguard.org/api/public/adblocker-rules" target="_blank" rel="noopener">fixguard.org/api/public/adblocker-rules</a>.</li>
               <li>Fixed a bug where allowlisted sites would infinitely increment the "Ads removed" count.</li>
               <li>Fixed inaccurately low "Ads removed" counter and updated it to factor in both cosmetically hidden ads and network-level blocks.</li>
               <li>Fixed the "Block notification prompts" toggle so it persists correctly and can be cleanly disabled per-site.</li>
@@ -64,7 +69,10 @@
             </ul>
             <h3>Changed</h3>
             <ul>
-              <li>Updated the website with a direct <a href="https://chromewebstore.google.com/detail/fq-adblocker/dnpcaahjbmabpacbdhnfjdincnkafjfm" target="_blank" rel="noopener">Chrome Web Store</a> install link now that the extension has been approved on Chrome.</li>
+              <li>Updated the website with a direct <a href="https://chromewebstore.google.com/detail/dnpcaahjbmabpacbdhnfjdincnkafjfm" target="_blank" rel="noopener">Chrome Web Store</a> install link now that the extension has been approved on Chrome.</li>
+              <li>Changed the legacy adblocker.fixquotes.com site to redirect straight to <a href="https://fixguard.org/">fixguard.org</a>.</li>
+              <li>Added a dedicated GitHub Pages 404 redirect page so unknown legacy routes also forward to <a href="https://fixguard.org/">fixguard.org</a>.</li>
+              <li>Renamed the product to FixGuard, aligned the extension/store branding, and moved the public website to fixguard.org.</li>
               <li>Updated the settings page and popup to show rule sync status, last-updated timestamps, and retry timing.</li>
               <li>Clarified the privacy policy to document remote rule downloads, browser-local storage usage, and the no-IP-log policy for the rules API.</li>
             </ul>

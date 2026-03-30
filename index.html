@@ -3,36 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FQ-AdBlocker — Lightweight Ad Blocker for Chrome & Edge</title>
+    <title>FixGuard – Ad Blocker & Privacy Protection for Chrome & Edge</title>
     <meta name="description" content="A lightweight Manifest V3 extension for Chrome and Edge with network blocking, cosmetic filtering, cookie consent hiding, and video ad blocking." />
-    <meta name="application-name" content="FQ-AdBlocker" />
-    <meta name="apple-mobile-web-app-title" content="FQ-AdBlocker" />
+    <meta name="application-name" content="FixGuard" />
+    <meta name="apple-mobile-web-app-title" content="FixGuard" />
     <meta name="theme-color" content="#111723" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="robots" content="index, follow" />
-    <meta name="google-site-verification" content="14OfSmxPs5-EXpOJ6Cx9AvpeZSgXMOnxvYtgm21ykQY" />
-    <link rel="canonical" href="https://adblocker.fixquotes.com" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://fixguard.org/" />
+    <meta http-equiv="refresh" content="0; url=https://fixguard.org/" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/icon-128.png" type="image/png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="apple-touch-icon" href="img/icon-128.png" />
+    <script>
+      window.location.replace("https://fixguard.org/");
+    </script>
 
     <!-- Open Graph -->
-    <meta property="og:site_name" content="FQ-AdBlocker" />
+    <meta property="og:site_name" content="FixGuard" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="FQ-AdBlocker — Lightweight Ad Blocker for Chrome & Edge" />
+    <meta property="og:title" content="FixGuard – Ad Blocker & Privacy Protection for Chrome & Edge" />
     <meta property="og:description" content="A lightweight Manifest V3 extension for Chrome and Edge with network blocking, cosmetic filtering, cookie consent hiding, and video ad blocking." />
-    <meta property="og:url" content="https://adblocker.fixquotes.com" />
-    <meta property="og:image" content="https://adblocker.fixquotes.com/img/feature-before-after-newspaper.png" />
-    <meta property="og:image:alt" content="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker" />
+    <meta property="og:url" content="https://fixguard.org/" />
+    <meta property="og:image" content="https://fixguard.org/img/feature-before-after-newspaper.png" />
+    <meta property="og:image:alt" content="Before and after comparison of an ad-heavy newspaper page cleaned up by FixGuard" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="FQ-AdBlocker — Lightweight Ad Blocker for Chrome & Edge" />
+    <meta name="twitter:title" content="FixGuard – Ad Blocker & Privacy Protection for Chrome & Edge" />
     <meta name="twitter:description" content="A lightweight Manifest V3 extension for Chrome and Edge with network blocking, cosmetic filtering, cookie consent hiding, and video ad blocking." />
-    <meta name="twitter:image" content="https://adblocker.fixquotes.com/img/feature-before-after-newspaper.png" />
+    <meta name="twitter:image" content="https://fixguard.org/img/feature-before-after-newspaper.png" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -42,7 +45,7 @@
       <nav class="nav container">
         <a href="index.html" class="nav-brand">
           <img src="img/icon-48.png" alt="" width="28" height="28" />
-          <span>FQ-AdBlocker</span>
+          <span>FixGuard</span>
         </a>
         <ul class="nav-links">
           <li><a href="index.html#features">Features</a></li>
@@ -59,9 +62,9 @@
         <div class="container hero-inner">
           <p class="eyebrow">Chrome & Edge Extension · Manifest V3</p>
           <h1>Browse without<br />the noise.</h1>
-          <p class="hero-sub">FQ-AdBlocker is a free, lightweight, privacy-first extension for Chrome and Edge that blocks ads, trackers, cookie banners, and notification prompts while giving you clean per-site control — no accounts, no subscriptions, no premium tiers.</p>
+          <p class="hero-sub">FixGuard is a free, lightweight, privacy-first extension for Chrome and Edge that blocks ads, trackers, cookie banners, and notification prompts while giving you clean per-site control — no accounts, no subscriptions, no premium tiers.</p>
           <div class="hero-actions">
-            <a href="https://chromewebstore.google.com/detail/fq-adblocker/dnpcaahjbmabpacbdhnfjdincnkafjfm" class="btn" target="_blank" rel="noopener"><img src="img/chrome.svg" alt="" width="20" height="20" />Add to Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/dnpcaahjbmabpacbdhnfjdincnkafjfm" class="btn" target="_blank" rel="noopener"><img src="img/chrome.svg" alt="" width="20" height="20" />Add to Chrome</a>
             <a href="index.html#screenshots" class="btn btn-outline">See Screenshots</a>
             <a href="index.html#features" class="btn btn-outline">See Features</a>
           </div>
@@ -79,7 +82,7 @@
               <button class="showcase-stage" type="button" data-screenshot-open aria-label="Open selected screenshot in full size">
                 <img
                   src="img/feature-before-after-newspaper.png"
-                  alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker"
+                  alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FixGuard"
                   data-screenshot-active-image
                 />
               </button>
@@ -87,7 +90,7 @@
               <article class="showcase-copy card">
                 <p class="showcase-label" data-screenshot-active-label>Before / After</p>
                 <h3 data-screenshot-active-title>Watch a cluttered news page turn readable</h3>
-                <p class="showcase-description" data-screenshot-active-description>One side shows the typical ad-heavy newspaper layout. The other shows the same story after FQ-AdBlocker clears banners, sticky promos, and overlays.</p>
+                <p class="showcase-description" data-screenshot-active-description>One side shows the typical ad-heavy newspaper layout. The other shows the same story after FixGuard clears banners, sticky promos, and overlays.</p>
                 <p class="showcase-support" data-screenshot-active-support>This is the clearest way to show the product value: same page, same article, much less noise.</p>
               </article>
             </div>
@@ -102,9 +105,9 @@
                 data-image="img/feature-before-after-newspaper.png"
                 data-title="Watch a cluttered news page turn readable"
                 data-label="Before / After"
-                data-description="One side shows the typical ad-heavy newspaper layout. The other shows the same story after FQ-AdBlocker clears banners, sticky promos, and overlays."
+                data-description="One side shows the typical ad-heavy newspaper layout. The other shows the same story after FixGuard clears banners, sticky promos, and overlays."
                 data-support="This is the clearest way to show the product value: same page, same article, much less noise."
-                data-alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FQ-AdBlocker"
+                data-alt="Before and after comparison of an ad-heavy newspaper page cleaned up by FixGuard"
               >
                 <img src="img/feature-before-after-newspaper_thumb.png" alt="" />
                 <span>Before / After</span>
@@ -121,7 +124,7 @@
                 data-label="Allowlist"
                 data-description="Allowlist the active site from the popup while keeping blocking enabled everywhere else."
                 data-support="Matched wildcard entries are surfaced in the popup, so users can see exactly why protection is paused on a given host."
-                data-alt="FQ-AdBlocker popup showing a matched allowlist pattern and enable button for the current site"
+                data-alt="FixGuard popup showing a matched allowlist pattern and enable button for the current site"
               >
                 <img src="img/feature-site-allowlist_thumb.png" alt="" />
                 <span>Site Allowlist</span>
@@ -138,7 +141,7 @@
                 data-label="Settings"
                 data-description="Control global blocking, cookie banners, tracking, notifications, video ads, and wildcard-disabled domains from a single page."
                 data-support="The settings page keeps the core toggles visible first, then leaves room for more advanced rule lists further down."
-                data-alt="FQ-AdBlocker settings page showing global toggles and disabled domains"
+                data-alt="FixGuard settings page showing global toggles and disabled domains"
               >
                 <img src="img/feature-settings-overview_thumb.png" alt="" />
                 <span>Settings Overview</span>
@@ -155,7 +158,7 @@
                 data-label="Custom Rules"
                 data-description="Add custom selectors, extra blocked domains, and custom video-ad filters on top of the built-in remote lists."
                 data-support="This gives power users a controlled way to extend filtering without losing the lightweight default setup."
-                data-alt="FQ-AdBlocker settings page showing custom selectors, custom block domains, and custom video ad domains"
+                data-alt="FixGuard settings page showing custom selectors, custom block domains, and custom video ad domains"
               >
                 <img src="img/feature-custom-rules_thumb.png" alt="" />
                 <span>Custom Rules</span>
@@ -172,7 +175,7 @@
                 data-label="Dark Mode"
                 data-description="The settings page follows the browser color scheme so advanced controls stay readable during long evening sessions."
                 data-support="The extension UI keeps the same structure in dark mode, which makes the popup and settings page easy to use without a separate theme toggle."
-                data-alt="FQ-AdBlocker settings page shown in dark mode"
+                data-alt="FixGuard settings page shown in dark mode"
               >
                 <img src="img/feature-dark-mode_thumb.png" alt="" />
                 <span>Dark Mode</span>
@@ -280,7 +283,7 @@
           <h2 class="section-title">Install in seconds — it's free.</h2>
 
           <div class="store-grid">
-            <a href="https://chromewebstore.google.com/detail/fq-adblocker/dnpcaahjbmabpacbdhnfjdincnkafjfm" class="store-card" target="_blank" rel="noopener">
+            <a href="https://chromewebstore.google.com/detail/dnpcaahjbmabpacbdhnfjdincnkafjfm" class="store-card" target="_blank" rel="noopener">
               <img src="img/chrome.svg" alt="" class="store-logo" width="48" height="48" />
               <div class="store-info">
                 <h3>Chrome Web Store</h3>
@@ -302,7 +305,7 @@
             <div class="step">
               <span class="step-num">1</span>
               <h3>Add to Your Browser</h3>
-              <p>Visit the <a href="https://chromewebstore.google.com/detail/fq-adblocker/dnpcaahjbmabpacbdhnfjdincnkafjfm" target="_blank" rel="noopener">Chrome Web Store</a> listing and click <strong>Add</strong>. Edge Add-ons listing coming soon.</p>
+              <p>Visit the <a href="https://chromewebstore.google.com/detail/dnpcaahjbmabpacbdhnfjdincnkafjfm" target="_blank" rel="noopener">Chrome Web Store</a> listing and click <strong>Add</strong>. Edge Add-ons listing coming soon.</p>
             </div>
             <div class="step">
               <span class="step-num">2</span>
@@ -312,7 +315,7 @@
             <div class="step">
               <span class="step-num">3</span>
               <h3>Pin It</h3>
-              <p>Click the extensions icon in your browser's toolbar and pin FQ-AdBlocker for quick access.</p>
+              <p>Click the extensions icon in your browser's toolbar and pin FixGuard for quick access.</p>
             </div>
             <div class="step">
               <span class="step-num">4</span>
