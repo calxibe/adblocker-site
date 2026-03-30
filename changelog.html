@@ -59,7 +59,8 @@
             </ul>
             <h3>Fixed</h3>
             <ul>
-              <li>Switched remote rules syncing from the legacy FixQuotes API host to <a href="https://fixguard.org/api/public/adblocker-rules" target="_blank" rel="noopener">fixguard.org/api/public/adblocker-rules</a>.</li>
+              <li>Renamed the FixGuard rules API endpoint to <a href="https://fixguard.org/api/adblocker-rules" target="_blank" rel="noopener">fixguard.org/api/adblocker-rules</a> and updated the extension to use the new route.</li>
+              <li>Made the FixGuard rules API standalone so rule downloads no longer depend on the legacy FixQuotes app configuration.</li>
               <li>Fixed a bug where allowlisted sites would infinitely increment the "Ads removed" count.</li>
               <li>Fixed inaccurately low "Ads removed" counter and updated it to factor in both cosmetically hidden ads and network-level blocks.</li>
               <li>Fixed the "Block notification prompts" toggle so it persists correctly and can be cleanly disabled per-site.</li>
